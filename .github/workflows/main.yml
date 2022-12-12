@@ -9,4 +9,9 @@ jobs:
     steps:
       - name: "listing the files"
         run: ls
+        
+      - uses: actions/checkout@v3
+
+      - name: "listing the files"
+        run: ls
   
