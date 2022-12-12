@@ -7,6 +7,6 @@ jobs:
   build:
     runs-on: Ubuntu-latest
     steps:
-      - name: "dhughugi"
-        run: echo "Hello"
+      - name: "listing the files"
+        run: ls
   
