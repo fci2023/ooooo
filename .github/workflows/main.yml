@@ -7,11 +7,14 @@ jobs:
   build:
     runs-on: Ubuntu-latest
     steps:
-      - name: "listing the files"
-        run: ls
-        
       - uses: actions/checkout@v3
-
-      - name: "listing the files"
-        run: ls
+      
+      - name: "Building the image"
+        run: docker build -t os2021/try .
+        
+      - name: "Login"
+        run: docker login --username os2021 --password dckr_pat_DksJBssTY8Z4zIFALL4S3EDDlDk
+        
+      - name: "Pushing the image to Docker hub"
+        run: docker push os2021/try
   
